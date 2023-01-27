@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# debian/rules that uses debhelper >= 7.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# This has to be exported to make some magic below work.
+export DH_OPTIONS
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-boost-libdir=/usr/lib/x86_64-linux-gnu
+
+configure:
+	dh_autoreconf
+	./configure
+
+clean:
+	dh_autoreconf_clean
+	dh_clean

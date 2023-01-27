@@ -1,0 +1,15 @@
+Source: liblightgrep
+Section: misc
+Priority: extra
+Maintainer: Erik Kristensen <erik@erikkristensen.com>
+Build-Depends: debhelper (>= 7), autotools-dev, dh-autoreconf, libboost-all-dev, libicu-dev, bison, pkg-config
+Standards-Version: 3.9.5
+Homepage: https://github.com/jonstewart/liblightgrep
+
+Package: liblightgrep
+Architecture: amd64 
+Depends: ${misc:Depends}
+Description: It is a program that scans a disk image,
+ a file, or a directory of files and extracts useful
+ information without parsing the file system or file
+ system structures.

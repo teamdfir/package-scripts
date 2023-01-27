@@ -1,0 +1,7 @@
+# liblightgrep
+
+## Usage
+
+```console
+make 
+```
